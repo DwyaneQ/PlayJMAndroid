@@ -1,12 +1,7 @@
 # PlayJMAndroid
 :fire::fire::fire:玩Android客户端，基于Jetpack组件库+Coroutines(协程)，Kotlin编写的mvvm架构项目，主要是学习JetPack组件库、协程的练手项目
 ## 项目截图
-![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/mvvm.png)
-## 核心框架组件
-### Kotlin
-  代码量减少的不是一星半点，各种语法糖，拓展函数，好处不必多说，懂的自然懂
-### MVVM架构
-  ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_1.png)
+ ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_1.png)
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_2.png)
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_3.png)
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_4.png)
@@ -17,6 +12,11 @@
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_9.png)
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_10.png)
   ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/screenshots_11.png)
+## 核心框架组件
+### Kotlin
+  代码量减少的不是一星半点，各种语法糖，拓展函数，好处不必多说，懂的自然懂
+### MVVM架构
+  ![image](https://raw.githubusercontent.com/DwyaneQ/PlayJMAndroid/master/screenshots/mvvm.png)
   MVVM 要解决的问题和 MVC，MVP 大同小异：控制逻辑，数据处理逻辑和界面交互耦合，并且同时能将 MVC 中的 View 和 Model 解耦，还可以把 MVP 中 Presenter 和 View 也解耦。
   在 MVVM 中，数据的流向是这样的：
 View 产生事件，自动通知给 ViewMode，ViewModel 中进行逻辑处理后，通知 Model 更新数据，Model 更新数据后，通知数据结构给 ViewModel，ViewModel 自动通知 View 更新界面。
