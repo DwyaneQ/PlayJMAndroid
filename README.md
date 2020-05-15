@@ -30,17 +30,17 @@ View 产生事件，自动通知给 ViewMode，ViewModel 中进行逻辑处理�
   * ViewModel
   
 ### 黑夜模式
-  1.项目主题设置为继承自DayNight主题
-  <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+  * 项目主题设置为继承自DayNight主题,<style name="AppTheme" parent="Theme.AppCompat.DayNight">
  
- 2.AppCompatDelegate.setDefaultNightMode()方法设置是否是黑夜模式，或跟随系统等
+ * AppCompatDelegate.setDefaultNightMode()方法设置是否是黑夜模式，或跟随系统等
   //  开启黑夜模式
   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
   //  关闭黑夜模式
   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
   
-  3.同时需要资源目录适配黑夜模式的color、drawable等
+  * 同时需要资源目录适配黑夜模式的color、drawable等
   创建color-night、drawable-night资源目录，添加与常规资源相同的文件名，不同颜色的资源文件以设置黑夜模式下的资源、颜色展示
 
-### 感谢
-   @hegaojian @CarGuo
+## 感谢
+   * @hegaojian 
+   * @CarGuo
