@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:checked="true"
+        android:icon="@drawable/ic_nav_home"
+        android:title="@string/btm_nav_home" />
+    <item
+        android:id="@+id/menu_square"
+        android:checked="true"
+        android:icon="@drawable/ic_nav_square"
+        android:title="@string/btm_nav_square" />
+    <item
+        android:id="@+id/menu_project"
+        android:checked="true"
+        android:icon="@drawable/ic_nav_project"
+        android:title="@string/btm_nav_project" />
+
+    <item
+        android:id="@+id/menu_gzh"
+        android:checked="true"
+        android:icon="@drawable/ic_nav_gzh"
+        android:title="@string/btm_nav_gzh" />
+</menu>

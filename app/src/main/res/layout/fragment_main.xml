@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.dwyaneq.playandroidkotlin.module.main.MainViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/main_toolbar" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_main"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/btm_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/light_bg_color"
+                app:itemIconSize="22dp"
+                app:itemIconTint="@color/bottom_navigation_color_selector"
+                app:itemTextColor="@color/bottom_navigation_color_selector"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/drawer"
+            layout="@layout/drawer_main_menu_layout"
+            app:mainViewModel="@{mainViewModel}" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_fragment">
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.main.MainFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_nav_main_to_login"
+            app:destination="@id/login_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_main_to_webview"
+            app:destination="@id/webview_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/search_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_system_to_system_detail"
+            app:destination="@id/system_detail_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_main_to_integral"
+            app:destination="@id/integral_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_main_to_collection"
+            app:destination="@id/collection_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_main_to_setting"
+            app:destination="@id/setting_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.login.RegisterFragment"
+        android:label="register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_main"
+            app:destination="@id/main_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webview_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.webview.WebViewFragment"
+        android:label="WebView"
+        tools:layout="@layout/fragment_webview" />
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.search.SearchFragment"
+        android:label="search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_search_result"
+            app:destination="@id/search_result_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_result_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.search.SearchResultFragment"
+        android:label="searchResult"
+        tools:layout="@layout/fragment_search_result">
+        <action
+            android:id="@+id/action_search_result_to_webview"
+            app:destination="@id/webview_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_search_result_main_to_login"
+            app:destination="@id/login_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/system_detail_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.system.SystemDetailFragment"
+        tools:layout="@layout/fragment_system_detail" />
+
+    <fragment
+        android:id="@+id/integral_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.integral.IntegralFragment"
+        tools:layout="@layout/fragment_integral" />
+
+    <fragment
+        android:id="@+id/collection_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.collect.CollectionFragment"
+        tools:layout="@layout/fragment_collection">
+        <action
+            android:id="@+id/action_collection_to_webview"
+            app:destination="@id/webview_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setting_fragment"
+        android:name="com.dwyaneq.playandroidkotlin.module.setting.SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>

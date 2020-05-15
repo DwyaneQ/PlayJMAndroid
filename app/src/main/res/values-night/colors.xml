@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B2B2B</color>
+    <color name="colorPrimaryDark">#2B2B2B</color>
+    <color name="colorAccent">#0452CF</color>
+
+    <color name="white">#fff</color>
+    <color name="common_bg_color">#1C2029</color>
+    <color name="light_bg_color">#2B2B2B</color>
+    <color name="default_img_bg_color">#CCC</color>
+    <color name="common_item_bg_color">#3C3F41</color>
+
+    <color name="subTextColor">#959595</color>
+    <color name="subLightTextColor">#c4c4c4</color>
+
+    <color name="search_history_bg_color">#f2f3f7</color>
+    <color name="login_btn_unable_color">#e8ebf6</color>
+    <color name="login_edit_bg_color">#4b4b4b</color>
+    <color name="common_txt333_color">#fff</color>
+    <color name="common_txt666_color">#fff</color>
+    <color name="common_txt999_color">#fff</color>
+    <color name="common_divider_color">#fff</color>
+    <color name="common_white_txt_color">#fff</color>
+    <color name="bottom_nav_txt_normal_color">#fff</color>
+
+    <color name="article_top_tag_color">#FA2F1A</color>
+    <color name="article_tag_color">#009c66</color>
+
+
+</resources>
