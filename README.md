@@ -24,10 +24,10 @@ View 产生事件，自动通知给 ViewMode，ViewModel 中进行逻辑处理�
 ### Retrofit+Coroutines(协程)网络请求
   Retrofit框架安卓靓仔们都不陌生，主要说一下Coroutines协程,Kotlin v1.3引入的概念，采用"同步"的写法来处理异步的操作，大大减少了处理复杂繁多的回调事件，以少量的代码来处理线程切换、异步操作
 ### 核心组件
-  *LiveData
-  *DataBinding
-  *Navigation
-  *ViewModel
+  * LiveData
+  * DataBinding
+  * Navigation
+  * ViewModel
   
 ### 黑夜模式
   1.项目主题设置为继承自DayNight主题
