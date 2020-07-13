@@ -23,5 +23,6 @@ class MApplication : BaseApp() {
         MultiDex.install(this)
 //        AppInjector.init(this)
         MMKV.initialize(this.filesDir.absolutePath + "/mmkv")
+
     }
 }

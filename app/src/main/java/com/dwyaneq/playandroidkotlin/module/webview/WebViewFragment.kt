@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.DialogFragmentNavigator
 import com.dwyaneq.jetpack_mvvm_base.navigation.NavHostFragment
 import com.dwyaneq.playandroidkotlin.R
 import com.dwyaneq.playandroidkotlin.common.base.BaseFragment

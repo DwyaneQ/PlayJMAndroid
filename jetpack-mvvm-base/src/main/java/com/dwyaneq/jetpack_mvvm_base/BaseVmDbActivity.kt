@@ -29,7 +29,7 @@ abstract class BaseVmDbActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppC
     }
 
     /**
-     * 反射创建ViewMoel
+     * 反射创建ViewModel
      */
     private fun createViewModel(): VM {
         return ViewModelProvider(this)[getVmClazz(this) as Class<VM>]
