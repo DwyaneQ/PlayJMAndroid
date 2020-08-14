@@ -17,7 +17,7 @@ import me.hgj.jetpackmvvm.network.BaseResponse
 import me.hgj.jetpackmvvm.network.ExceptionHandle
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2020/4/8
  * 描述　:BaseViewModel请求协程封装
  */

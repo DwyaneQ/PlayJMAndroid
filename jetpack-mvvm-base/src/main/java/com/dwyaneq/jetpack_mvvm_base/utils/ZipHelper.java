@@ -14,7 +14,7 @@ import java.util.zip.GZIPOutputStream;
 import java.util.zip.Inflater;
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2020/3/26
  * 描述　:
  */

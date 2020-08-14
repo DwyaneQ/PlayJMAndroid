@@ -1,12 +1,14 @@
 package com.dwyaneq.playandroidkotlin.module.square
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.dwyaneq.playandroidkotlin.R
 import com.dwyaneq.playandroidkotlin.adapter.SquareListAdapter
+import com.dwyaneq.playandroidkotlin.aop.CheckLogin
 import com.dwyaneq.playandroidkotlin.common.base.BaseFragment
 import com.dwyaneq.playandroidkotlin.common.ext.init
 import com.dwyaneq.playandroidkotlin.common.ext.initFloatBtn
@@ -43,18 +45,7 @@ class SquareListFragment : BaseFragment<SquareViewModel, FragmentSquareListBindi
             it.addChildClickViewIds(R.id.iv_collect)
             it.setOnItemChildClickListener { _, view, position ->
                 if (view.id == R.id.iv_collect) {
-                    if (CacheUtil.isLogin()) {
-                        val articleItem = it.data[position]
-                        if (articleItem.collect) {// 取消收藏
-                            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
-                            viewModel.cancelCollect(articleItem.id)
-                        } else {//  收藏
-                            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
-                            viewModel.collect(articleItem.id)
-                        }
-                    } else {
-                        navigationPopUpTo(view, R.id.action_nav_main_to_login)
-                    }
+                    collect(position, view)
                 }
             }
             it.setOnItemClickListener { _, view, position ->
@@ -153,4 +144,16 @@ class SquareListFragment : BaseFragment<SquareViewModel, FragmentSquareListBindi
     }
 
     override fun getLayoutId(): Int = R.layout.fragment_square_list
+
+    @CheckLogin
+    private fun collect(position: Int, view: View) {
+        val articleItem = squareListAdapter.data[position]
+        if (articleItem.collect) {// 取消收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
+            viewModel.cancelCollect(articleItem.id)
+        } else {//  收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
+            viewModel.collect(articleItem.id)
+        }
+    }
 }

@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2019/12/23
  * 描述　: 网络请求构建器基类
  */

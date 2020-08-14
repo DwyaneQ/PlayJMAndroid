@@ -1,7 +1,7 @@
 package me.hgj.jetpackmvvm.network
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2019/12/17
  * 描述　: 错误枚举类
  */

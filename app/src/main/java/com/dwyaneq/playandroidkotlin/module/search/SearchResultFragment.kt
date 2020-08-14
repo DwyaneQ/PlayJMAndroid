@@ -1,12 +1,14 @@
 package com.dwyaneq.playandroidkotlin.module.search
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.dwyaneq.playandroidkotlin.R
 import com.dwyaneq.playandroidkotlin.adapter.HomeArticleAdapter
+import com.dwyaneq.playandroidkotlin.aop.CheckLogin
 import com.dwyaneq.playandroidkotlin.common.base.BaseFragment
 import com.dwyaneq.playandroidkotlin.common.ext.init
 import com.dwyaneq.playandroidkotlin.common.ext.initFloatBtn
@@ -47,18 +49,7 @@ class SearchResultFragment : BaseFragment<SearchViewModel, FragmentSearchResultB
             it.setOnItemChildClickListener { _, view, position ->
                 if (view.id == R.id.iv_collect) {
                     // 收藏
-                    if (CacheUtil.isLogin()) {
-                        val articleItem = articleAdapter.data[position]
-                        if (articleItem.collect) {// 取消收藏
-                            viewModel.cancelCollect(articleItem.id)
-                            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
-                        } else {//  收藏
-                            viewModel.collect(articleItem.id)
-                            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
-                        }
-                    } else {
-                        navigationPopUpTo(view, R.id.action_search_result_main_to_login)
-                    }
+                    collect(position, view)
                 }
             }
             it.setOnItemClickListener { _, view, position ->
@@ -167,6 +158,18 @@ class SearchResultFragment : BaseFragment<SearchViewModel, FragmentSearchResultB
                     }
                 }
             })
+        }
+    }
+
+    @CheckLogin
+    private fun collect(position: Int, view: View) {
+        val articleItem = articleAdapter.data[position]
+        if (articleItem.collect) {// 取消收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
+            viewModel.cancelCollect(articleItem.id)
+        } else {//  收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
+            viewModel.collect(articleItem.id)
         }
     }
 }

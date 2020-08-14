@@ -1,4 +1,4 @@
-package me.hgj.jetpackmvvm.network
+package com.dwyaneq.jetpack_mvvm_base.network
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Deferred
 import retrofit2.*
@@ -6,7 +6,7 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2020/2/27
  * 描述　:
  */

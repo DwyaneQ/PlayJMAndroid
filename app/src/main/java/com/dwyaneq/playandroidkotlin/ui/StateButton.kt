@@ -6,6 +6,7 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.StateListDrawable
 import android.util.AttributeSet
+import android.view.MotionEvent
 import androidx.annotation.ColorInt
 import androidx.annotation.FloatRange
 import androidx.appcompat.widget.AppCompatButton
@@ -55,6 +56,10 @@ class StateButton @JvmOverloads constructor(context: Context, attrs: AttributeSe
 
     init {
         setup(attrs)
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+        return super.dispatchTouchEvent(event)
     }
 
     private fun setup(attrs: AttributeSet?) {
@@ -286,4 +291,5 @@ class StateButton @JvmOverloads constructor(context: Context, attrs: AttributeSe
         this.mUnableTextColor = unableTextColor
         setTextColor()
     }
+
 }

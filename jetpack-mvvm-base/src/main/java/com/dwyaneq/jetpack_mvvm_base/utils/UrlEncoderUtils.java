@@ -1,7 +1,7 @@
 package com.dwyaneq.jetpack_mvvm_base.utils;
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2020/3/26
  * 描述　:
  */

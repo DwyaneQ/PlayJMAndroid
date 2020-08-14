@@ -7,7 +7,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 20120/1/7
  * 描述　:
  */

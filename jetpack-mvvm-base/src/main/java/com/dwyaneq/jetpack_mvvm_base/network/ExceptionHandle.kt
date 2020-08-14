@@ -9,7 +9,7 @@ import retrofit2.HttpException
 import java.net.ConnectException
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 2019/12/17
  * 描述　: 根据异常返回相关的错误信息工具类
  */

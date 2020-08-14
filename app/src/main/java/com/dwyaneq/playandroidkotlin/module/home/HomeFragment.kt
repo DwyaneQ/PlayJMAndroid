@@ -2,6 +2,7 @@ package com.dwyaneq.playandroidkotlin.module.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import com.dwyaneq.jetpack_mvvm_base.ext.parseState
 import com.dwyaneq.playandroidkotlin.R
 import com.dwyaneq.playandroidkotlin.adapter.HomeArticleAdapter
 import com.dwyaneq.playandroidkotlin.adapter.HomeBannerAdapter
+import com.dwyaneq.playandroidkotlin.aop.CheckLogin
 import com.dwyaneq.playandroidkotlin.common.base.BaseFragment
 import com.dwyaneq.playandroidkotlin.common.ext.init
 import com.dwyaneq.playandroidkotlin.common.ext.initFloatBtn
@@ -59,18 +61,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
             it.addChildClickViewIds(R.id.iv_collect)
             it.setOnItemChildClickListener { _, view, position ->
                 if (view.id == R.id.iv_collect) {
-                    if (CacheUtil.isLogin()) {
-                        val articleItem = articleAdapter.data[position]
-                        if (articleItem.collect) {// 取消收藏
-                            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
-                            viewModel.cancelCollect(articleItem.id)
-                        } else {//  收藏
-                            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
-                            viewModel.collect(articleItem.id)
-                        }
-                    } else {
-                        navigationPopUpTo(view, R.id.action_nav_main_to_login)
-                    }
+                    collect(position, view)
                 }
             }
             it.setOnItemClickListener { _, view, position ->
@@ -84,6 +75,18 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
         swipe_refresh.setColorSchemeColors(resources.getColor(R.color.colorPrimary))
         swipe_refresh.init {
             viewModel.getArticleList(true)
+        }
+    }
+
+    @CheckLogin
+    private fun collect(position: Int, view: View) {
+        val articleItem = articleAdapter.data[position]
+        if (articleItem.collect) {// 取消收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_uncollect)
+            viewModel.cancelCollect(articleItem.id)
+        } else {//  收藏
+            (view as ImageView).setImageResource(R.drawable.ic_article_collect)
+            viewModel.collect(articleItem.id)
         }
     }
 

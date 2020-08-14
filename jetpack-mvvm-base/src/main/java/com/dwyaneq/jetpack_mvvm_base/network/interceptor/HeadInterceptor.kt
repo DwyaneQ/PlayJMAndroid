@@ -1,4 +1,4 @@
-package me.hgj.jetpackmvvm.network.interceptor
+package com.dwyaneq.jetpack_mvvm_base.network.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

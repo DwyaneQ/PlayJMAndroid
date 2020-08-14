@@ -9,9 +9,9 @@ import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
 import com.google.gson.GsonBuilder
 import me.hgj.jetpackmvvm.network.BaseNetworkApi
-import me.hgj.jetpackmvvm.network.CoroutineCallAdapterFactory
+import com.dwyaneq.jetpack_mvvm_base.network.CoroutineCallAdapterFactory
 import me.hgj.jetpackmvvm.network.interceptor.CacheInterceptor
-import me.hgj.jetpackmvvm.network.interceptor.HeadInterceptor
+import com.dwyaneq.jetpack_mvvm_base.network.interceptor.HeadInterceptor
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -42,7 +42,7 @@ class NetworkApi : BaseNetworkApi() {
                     AppConfig.CACHE_SIZE
                 )
             )
-            // 添加cookie自动持久化
+            // 添加cookie自动持  久化mk
             cookieJar(cookieJar)
             //添加公共heads 注意要设置在日志拦截器之前，不然Log中会不显示head信息
             addInterceptor(HeadInterceptor(mapOf()))

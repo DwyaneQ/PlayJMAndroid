@@ -7,7 +7,7 @@ import me.hgj.jetpackmvvm.ext.util.logd
 import me.hgj.jetpackmvvm.ext.util.loge
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 20120/1/7
  * 描述　:
  */

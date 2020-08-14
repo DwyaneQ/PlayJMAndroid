@@ -42,5 +42,5 @@ View 产生事件，自动通知给 ViewMode，ViewModel 中进行逻辑处理�
   创建color-night、drawable-night资源目录，添加与常规资源相同的文件名，不同颜色的资源文件以设置黑夜模式下的资源、颜色展示
 
 ## 感谢
-   * @hegaojian 
+   * @DWQ
    * @CarGuo

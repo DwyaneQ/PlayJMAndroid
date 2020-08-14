@@ -4,7 +4,7 @@ import android.app.Activity
 import java.util.*
 
 /**
- * 作者　: hegaojian
+ * 作者　: DWQ
  * 时间　: 20120/1/7
  * 描述　:
  */
